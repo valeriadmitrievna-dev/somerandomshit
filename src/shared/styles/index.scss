@@ -10,6 +10,8 @@
 
 body {
   @include typography-body;
+  background-color: $neutral-50;
+  color: $neutral-900;
 }
 
 h1 {
