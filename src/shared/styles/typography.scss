@@ -1,0 +1,147 @@
+@mixin h1 {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+@mixin h2 {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+}
+
+@mixin h3 {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 600;
+}
+
+@mixin h4 {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+@mixin large {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+@mixin lead {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+@mixin p {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+@mixin p-ui {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin p-ui-medium {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+@mixin list {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin body {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin body-medium {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+@mixin subtle {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin subtle-medium {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+
+@mixin subtle-semibold {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+@mixin small {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+@mixin detail {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin blockquote {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin code {
+  font-family: "GitLabMono", monospace;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+@mixin table-head {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+@mixin table-item {
+  font-family: "GitLabSans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
