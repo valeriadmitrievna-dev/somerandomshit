@@ -1,0 +1,14 @@
+@use "@/shared/styles/common" as *;
+
+.code {
+  display: block;
+  @include typography-code;
+  @include container(0.25, 0.5);
+  background-color: $neutral-200;
+  border-radius: 2px;
+  width: fit-content;
+
+  &.inline {
+    display: inline-block;
+  }
+}

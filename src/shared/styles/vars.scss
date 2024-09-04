@@ -3,3 +3,16 @@ $sizer: 8px;
 @function spacing($count: 1) {
   @return $count * $sizer;
 }
+
+@mixin container($counter1: 1, $counter2: null) {
+  @if $counter2 != null {
+    $vertical: spacing($counter1);
+    $horizontal: spacing($counter2);
+
+    padding: $vertical $horizontal;
+  } @else {
+    $spacing: spacing($counter1);
+
+    padding: $spacing;
+  }
+}
