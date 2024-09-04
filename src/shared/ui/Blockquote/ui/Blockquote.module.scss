@@ -1,0 +1,8 @@
+@use "@/shared/styles/common" as *;
+
+.blockquote {
+  @include typography-blockquote;
+  padding-left: spacing(3);
+  max-width: 680px;
+  border-left: 2px solid $neutral-300;
+}

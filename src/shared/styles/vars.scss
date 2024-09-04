@@ -1,0 +1,5 @@
+$sizer: 8px;
+
+@function spacing($count: 1) {
+  @return $count * $sizer;
+}
