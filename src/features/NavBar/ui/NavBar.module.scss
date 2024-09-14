@@ -1,0 +1,32 @@
+@use "@/shared/styles/common" as *;
+
+.navbar {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  border-top: 1px solid $neutral-300;
+
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: spacing(0.5);
+    @include container(1);
+    width: 100%;
+    height: 100%;
+    color: $neutral-700;
+
+    &Icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    &Name {
+      @include typography-detail;
+    }
+
+    &.active {
+      color: $primary-700;
+    }
+  }
+}

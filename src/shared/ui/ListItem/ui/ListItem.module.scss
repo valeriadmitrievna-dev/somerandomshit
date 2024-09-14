@@ -1,0 +1,12 @@
+@use "@/shared/styles/common" as *;
+
+.listItem {
+  @include typography-subtle-medium;
+  @include container(0.75, 1);
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $neutral-100;
+  }
+}
