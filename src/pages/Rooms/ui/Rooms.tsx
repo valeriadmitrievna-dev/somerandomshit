@@ -1,5 +1,5 @@
 import { FC } from "react";
-import s from "./RoomsPage.module.scss";
+import s from "./Rooms.module.scss";
 import { PageTitle } from "@/entitites/PageTitle";
 
 const RoomsPage: FC = () => {

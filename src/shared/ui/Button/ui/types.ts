@@ -22,4 +22,6 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   loading?: boolean;
   children?: string;
   icon?: FC<SVGProps<SVGSVGElement>>;
+  href?: string;
+  centered?: boolean;
 }

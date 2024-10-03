@@ -3,4 +3,8 @@
 .pageTitle {
   @include typography-h3;
   margin-bottom: spacing(3);
+
+  &.standalone {
+    margin-bottom: 0;
+  }
 }

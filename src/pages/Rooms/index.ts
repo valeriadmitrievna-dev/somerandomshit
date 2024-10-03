@@ -1,1 +1,1 @@
-export { default as RoomsPage } from './ui/RoomsPage';
+export { default as RoomsPage } from './ui/Rooms';

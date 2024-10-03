@@ -3,7 +3,7 @@ import { homespacesApi } from "../services/homespaces";
 import { roomsApi } from "@/services/rooms";
 import { tasksApi } from "@/services/tasks";
 import { usersApi } from "@/services/users";
-import { authReducer } from './auth';
+import { authMiddleware, authReducer } from './auth';
 
 export const store = configureStore({
   reducer: {
@@ -15,6 +15,7 @@ export const store = configureStore({
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(
+      authMiddleware,
       homespacesApi.middleware,
       roomsApi.middleware,
       tasksApi.middleware,

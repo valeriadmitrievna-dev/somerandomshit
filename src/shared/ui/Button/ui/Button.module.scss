@@ -1,6 +1,8 @@
 @use "@/shared/styles/common" as *;
 
 .button {
+  display: flex;
+  align-items: center;
   width: fit-content;
   height: fit-content;
   border-radius: 4px;
@@ -11,14 +13,23 @@
   background-color: var(--button-background);
   border: 2px solid var(--button-border-color);
   color: var(--button-text);
-  transition: 200ms;
+  transition: background-color 200ms;
 
-  &:hover {
+  &:hover:not(:disabled) {
     background-color: var(--button-background-hover);
   }
 
-  &:active {
+  &:active:not(:disabled) {
     background-color: var(--button-background-active);
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+
+  &.centered {
+    justify-content: center;
   }
 
   &-small {

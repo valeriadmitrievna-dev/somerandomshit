@@ -2,9 +2,9 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AuthState } from "./types";
 
 const initialState: AuthState = {
-  isAuth: false,
+  isAuth: !!localStorage.getItem("Authentication"),
   homespaceId: null,
-  userId: null,
+  userId: localStorage.getItem("Authentication") ?? null,
 };
 
 export const authSlice = createSlice({
