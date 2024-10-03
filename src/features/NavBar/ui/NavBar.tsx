@@ -15,23 +15,23 @@ const NavBar: FC = () => {
 
   return (
     <div className={s.navbar}>
-      <NavLink to='/' className={linkCN}>
+      <NavLink to='/app' className={linkCN}>
         <GridIcon className={s.linkIcon} />
         <span className={s.linkName}>Main</span>
       </NavLink>
-      <NavLink to='/todos' className={linkCN}>
+      <NavLink to='/app/todos' className={linkCN}>
         <TodoListIcon className={s.linkIcon} />
         <span className={s.linkName}>Todos</span>
       </NavLink>
-      <NavLink to='/rooms' className={linkCN}>
+      <NavLink to='/app/rooms' className={linkCN}>
         <HomeIcon className={s.linkIcon} />
         <span className={s.linkName}>Rooms</span>
       </NavLink>
-      <NavLink to='/family' className={linkCN}>
+      <NavLink to='/app/family' className={linkCN}>
         <UsersIcon className={s.linkIcon} />
         <span className={s.linkName}>Family</span>
       </NavLink>
-      <NavLink to='/profile' className={linkCN}>
+      <NavLink to='/app/profile' className={linkCN}>
         <UserIcon className={s.linkIcon} />
         <span className={s.linkName}>Profile</span>
       </NavLink>
