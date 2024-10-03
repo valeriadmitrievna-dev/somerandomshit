@@ -1,4 +1,5 @@
 import { MainLayout } from "@/features/MainLayout";
+import { RoomsPage } from '@/pages/Rooms';
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
@@ -16,7 +17,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'rooms',
-        element: <>Rooms</>,
+        element: <RoomsPage />,
       },
       {
         path: 'family',

@@ -1,0 +1,6 @@
+@use "@/shared/styles/common" as *;
+
+.pageTitle {
+  @include typography-h3;
+  margin-bottom: spacing(3);
+}
