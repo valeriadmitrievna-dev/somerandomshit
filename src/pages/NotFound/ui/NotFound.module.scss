@@ -1,0 +1,19 @@
+@use "@/shared/styles/common" as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: spacing(2);
+  text-align: center;
+  color: $neutral-500;
+  width: 100%;
+  height: 100%;
+  @include container(4);
+
+  h1 {
+    @include typography-h3;
+    color: $neutral-900;
+  }
+}

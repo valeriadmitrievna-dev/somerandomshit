@@ -1,10 +1,13 @@
+import { createBrowserRouter } from "react-router-dom";
+
 import { AuthLayout } from "@/features/AuthLayout";
 import { MainLayout } from "@/features/MainLayout";
+
+import { NotFoundPage } from "@/pages/NotFound";
 import { AuthPage } from "@/pages/Auth";
 import { ProfilePage } from "@/pages/Profile";
 import { RoomsPage } from "@/pages/Rooms";
 import { SignInPage } from "@/pages/SignIn";
-import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
   {
@@ -53,6 +56,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "*",
-    element: <>Not Found</>,
+    element: <NotFoundPage />,
   },
 ]);
