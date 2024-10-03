@@ -15,7 +15,7 @@ const NavBar: FC = () => {
 
   return (
     <div className={s.navbar}>
-      <NavLink to='/app' className={linkCN}>
+      <NavLink to='/app/main' className={linkCN}>
         <GridIcon className={s.linkIcon} />
         <span className={s.linkName}>Main</span>
       </NavLink>

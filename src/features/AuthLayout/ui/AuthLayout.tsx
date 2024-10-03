@@ -10,7 +10,7 @@ const MainLayout: FC = () => {
 
   useEffect(() => {
     if (isAuth) {
-      navigate("/app", { replace: true });
+      navigate("/app/main", { replace: true });
     }
   }, [navigate, isAuth]);
 
