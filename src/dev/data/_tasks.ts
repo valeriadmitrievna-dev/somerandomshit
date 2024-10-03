@@ -5,7 +5,9 @@ import { random } from "lodash";
 import { addMonths, subMonths } from "date-fns";
 
 const createTask: () => Task = () => {
-  const homespaceId = homespaces[random(0, homespaces.length - 1)].id;
+  const homespaceId = random(0, 1)
+    ? homespaces[0].id
+    : homespaces[random(1, homespaces.length - 1)].id;
   const users: User[] = [];
 
   return {

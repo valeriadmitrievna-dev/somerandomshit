@@ -1,23 +1,18 @@
-import { Homespace, User, UserRole } from "@/shared/types";
+import { User, UserRole } from "@/shared/types";
 import { faker } from "@faker-js/faker";
 import { homespaces } from "./_homespaces";
 import { random } from "lodash";
 
-const createUser: (homespace: Homespace) => User = (homespace) => {
+const createUser: (index: number) => User = (index) => {
   return {
-    id: faker.string.uuid(),
-    name: faker.person.firstName(),
-    homespaceId: homespace.id,
-    role: UserRole.Resident,
+    id: index ? faker.string.uuid() : "test-user",
+    name: index ? faker.person.firstName() : "testuser",
+    homespaceId: homespaces[0].id,
+    role: index ? UserRole.Resident : UserRole.Housekeeper,
   };
 };
 
-export const users: User[] = homespaces
-  .map((homespace) =>
-    faker.helpers.multiple(() => createUser(homespace), { count: random(1, 5) })
-  )
-  .map(users => {
-    users[0].role = UserRole.Housekeeper;
-    return users;
-  })
-  .flat();
+export const users: User[] = faker.helpers.multiple(
+  (_, index) => createUser(index),
+  { count: random(1, 5) }
+);

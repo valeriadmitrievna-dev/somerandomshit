@@ -35,14 +35,14 @@ const MainLayout: FC = () => {
         userId,
       });
     }
-  }, [isAuth, user, homespaceId, userId, error]);
+  }, [isAuth, user, homespaceId, userId]);
 
   useEffect(() => {
-    if (isAuth && !user) {
-      console.log('call logout');
+    if (isAuth && error) {
+      console.log("call logout");
       dispatch(logout());
     }
-  }, [isAuth, user]);
+  }, [isAuth, error]);
 
   if (isAuth) {
     return (

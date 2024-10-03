@@ -6,7 +6,9 @@ import { random } from "lodash";
 const createRoom: () => Room = () => ({
   id: faker.string.uuid(),
   name: faker.lorem.word(),
-  homespaceId: homespaces[random(0, homespaces.length - 1)].id,
+  homespaceId: random(0, 1)
+    ? homespaces[0].id
+    : homespaces[random(1, homespaces.length - 1)].id,
 });
 
 export const rooms: Room[] = faker.helpers.multiple(createRoom, { count: 15 });
