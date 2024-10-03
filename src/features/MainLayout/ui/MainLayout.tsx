@@ -3,18 +3,46 @@ import { FC, useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import s from "./MainLayout.module.scss";
 import { ScrollArea } from "@/shared/ui/ScrollArea";
-import { useSelector } from "react-redux";
-import { isAuthSelector } from "@/store/auth";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  homespaceIdSelector,
+  isAuthSelector,
+  login,
+  logout,
+  userIdSelector,
+} from "@/store/auth";
+import { useGetUserByIdQuery } from "@/store";
 
 const MainLayout: FC = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const isAuth = useSelector(isAuthSelector);
+  const userId = useSelector(userIdSelector);
+  const homespaceId = useSelector(homespaceIdSelector);
+
+  const { data: user, error } = useGetUserByIdQuery(userId!, { skip: !userId });
 
   useEffect(() => {
     if (!isAuth) {
       navigate("/", { replace: true });
     }
   }, [navigate, isAuth]);
+
+  useEffect(() => {
+    if (isAuth && user && !homespaceId) {
+      login({
+        homespaceId: user.homespaceId,
+        userId,
+      });
+    }
+  }, [isAuth, user, homespaceId, userId, error]);
+
+  useEffect(() => {
+    if (isAuth && !user) {
+      console.log('call logout');
+      dispatch(logout());
+    }
+  }, [isAuth, user]);
 
   if (isAuth) {
     return (

@@ -5,7 +5,7 @@ export const authMiddleware: Middleware = () => (next) => (action) => {
   if (login.match(action) && action.payload.userId) {
     localStorage.setItem("Authentication", action.payload.userId);
   } else if (logout.match(action)) {
-    localStorage.setItem("Authentication", "false");
+    localStorage.removeItem("Authentication");
   }
   return next(action);
 };
