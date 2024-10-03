@@ -27,7 +27,6 @@ const SignIn: FC = () => {
           label='User name'
           placeholder='Type here...'
           error={error as string}
-          disabled
         />
       </div>
       <Button

@@ -25,7 +25,7 @@
     border-radius: spacing(0.5);
     transition: border-color 200ms, opacity 200ms;
 
-    &:not(:focus):hover:not(:disabled) {
+    &:not(:focus):hover:not(:disabled):placeholder-shown {
       border-color: $neutral-400;
     }
 
@@ -34,7 +34,8 @@
       border-color: $primary-300;
     }
 
-    &:focus:hover:not(:disabled) {
+    &:focus:hover:not(:disabled),
+    &:hover:not(:disabled):not(:placeholder-shown) {
       border-color: $primary-400;
     }
 
