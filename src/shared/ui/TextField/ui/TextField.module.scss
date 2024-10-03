@@ -1,0 +1,45 @@
+@use "@/shared/styles/common" as *;
+
+.textField {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: spacing(0.5);
+
+  &.disabled .label {
+    opacity: 0.75;
+  }
+
+  .label {
+    @include typography-small;
+    transition: opacity 200ms;
+  }
+
+  .input {
+    width: 100%;
+    @include container(0.5, 1.5);
+    @include typography-body;
+    color: inherit;
+    background-color: $neutral-0;
+    border: 2px solid $neutral-300;
+    border-radius: spacing(0.5);
+    transition: border-color 200ms, opacity 200ms;
+
+    &:not(:focus):hover:not(:disabled) {
+      border-color: $neutral-400;
+    }
+
+    &:focus,
+    &:not(:focus):not(:hover):not(:placeholder-shown) {
+      border-color: $primary-300;
+    }
+
+    &:focus:hover:not(:disabled) {
+      border-color: $primary-400;
+    }
+
+    &:disabled {
+      opacity: 0.75;
+    }
+  }
+}
