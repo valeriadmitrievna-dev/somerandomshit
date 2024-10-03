@@ -10,6 +10,20 @@
     opacity: 0.75;
   }
 
+  &.error .input {
+    border-color: $error-300 !important;
+
+    &:hover,
+    &:not(:placeholder-shown) {
+      border-color: $error-400 !important;
+    }
+
+    &:focus,
+    &:hover:not(:placeholder-shown) {
+      border-color: $error-500 !important;
+    }
+  }
+
   .label {
     @include typography-small;
     transition: opacity 200ms;
@@ -42,5 +56,10 @@
     &:disabled {
       opacity: 0.75;
     }
+  }
+
+  .error {
+    @include typography-small;
+    color: $error-500;
   }
 }

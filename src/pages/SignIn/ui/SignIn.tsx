@@ -6,11 +6,13 @@ import { useLoginMutation } from "@/store";
 import { TextField } from "@/shared/ui/TextField";
 
 const SignIn: FC = () => {
-  const [login, { error }] = useLoginMutation();
+  const [login, { error, reset }] = useLoginMutation();
   const [name, setName] = useState("");
 
   const changeNameHandler = (value: string) => {
     setName(value);
+
+    if (error) reset();
   };
 
   const submitHandler = () => {

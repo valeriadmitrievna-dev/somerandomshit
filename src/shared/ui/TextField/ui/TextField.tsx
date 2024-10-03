@@ -17,6 +17,7 @@ const TextField: FC<TextFieldProps> = ({
   const { current: id } = useRef(uniqueId());
   const textFieldCN = cn(s.textField, s[`textField-${size}`], {
     [s.disabled]: disabled || loading,
+    [s.error]: error,
   });
 
   const changeValueHandler = (event: ChangeEvent<HTMLInputElement>) => {
