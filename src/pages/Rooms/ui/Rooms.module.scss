@@ -2,4 +2,31 @@
 
 .page {
   @include container(2);
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: spacing(2);
+
+    .modes {
+      display: flex;
+      align-items: center;
+      gap: spacing();
+    }
+  }
+}
+
+.rooms {
+  gap: spacing(2);
+
+  &.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  &.list {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -1,0 +1,106 @@
+@use "@/shared/styles/common" as *;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  border: none;
+  @include typography-body-medium;
+  cursor: pointer;
+
+  background-color: var(--button-background);
+  border: 2px solid var(--button-border-color);
+  color: var(--button-text);
+  transition: background-color 200ms;
+
+  .icon {
+    aspect-ratio: 1 / 1;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: var(--button-background-hover);
+  }
+
+  &:active:not(:disabled) {
+    background-color: var(--button-background-active);
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+  }
+
+  &-small {
+    width: 28px;
+
+    .icon {
+      width: 16px;
+    }
+  }
+
+  &-medium {
+    width: 32px;
+
+    .icon {
+      width: 20px;
+    }
+  }
+
+  &-large {
+    width: 40px;
+
+    .icon {
+      width: 24px;
+    }
+  }
+
+  &-primary {
+    --button-background: #{$primary-500};
+    --button-background-hover: #{$primary-600};
+    --button-background-active: #{$primary-700};
+    --button-text: #{$neutral-50};
+    --button-border-color: transparent;
+  }
+
+  &-error {
+    --button-background: #{$error-500};
+    --button-background-hover: #{$error-600};
+    --button-background-active: #{$error-700};
+    --button-text: #{$neutral-50};
+    --button-border-color: transparent;
+  }
+
+  &-warning {
+    --button-background: #{$warning-500};
+    --button-background-hover: #{$warning-600};
+    --button-background-active: #{$warning-700};
+    --button-text: #{$neutral-50};
+    --button-border-color: transparent;
+  }
+
+  &-success {
+    --button-background: #{$success-500};
+    --button-background-hover: #{$success-600};
+    --button-background-active: #{$success-700};
+    --button-text: #{$neutral-50};
+    --button-border-color: transparent;
+  }
+
+  &-default {
+    --button-background: #{$neutral-200};
+    --button-background-hover: #{$neutral-300};
+    --button-background-active: #{$neutral-400};
+    --button-text: #{$neutral-900};
+    --button-border-color: transparent;
+  }
+
+  &-outline {
+    --button-background: transparent;
+    --button-background-hover: #{$neutral-100};
+    --button-background-active: #{$neutral-200};
+    --button-text: #{$neutral-900};
+    --button-border-color: #{$neutral-200};
+  }
+}

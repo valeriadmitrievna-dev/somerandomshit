@@ -30,16 +30,17 @@ const MainLayout: FC = () => {
 
   useEffect(() => {
     if (isAuth && user && !homespaceId) {
-      login({
-        homespaceId: user.homespaceId,
-        userId,
-      });
+      dispatch(
+        login({
+          homespaceId: user.homespaceId,
+          userId,
+        })
+      );
     }
   }, [isAuth, user, homespaceId, userId]);
 
   useEffect(() => {
     if (isAuth && error) {
-      console.log("call logout");
       dispatch(logout());
     }
   }, [isAuth, error]);

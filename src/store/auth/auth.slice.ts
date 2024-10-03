@@ -27,7 +27,6 @@ export const authSlice = createSlice({
       }
     },
     logout: (state) => {
-      console.log('execute logout');
       state.isAuth = false;
       state.homespaceId = null;
       state.userId = null;
