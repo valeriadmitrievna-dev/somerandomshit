@@ -5,6 +5,7 @@
   align-items: stretch;
   justify-content: space-between;
   border-top: 1px solid $neutral-300;
+  height: var(--app-menu-height);
 
   .link {
     display: flex;

@@ -1,6 +1,10 @@
 @use "./common.scss" as *;
 @import "./fonts.scss";
 
+:root {
+  --app-menu-height: 56px;
+}
+
 * {
   margin: 0;
   padding: 0;

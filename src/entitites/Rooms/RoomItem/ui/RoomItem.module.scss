@@ -1,0 +1,47 @@
+@use "@/shared/styles/common" as *;
+
+.roomItem {
+  $icon-size: 24px;
+  border: 2px solid $neutral-300;
+  background-color: $neutral-100;
+  border-radius: spacing();
+  @include container(1, 2);
+  display: flex;
+  align-items: center;
+  gap: spacing(1.5);
+  transition: background-color 200ms, border-color 200ms;
+
+  &Icon {
+    width: $icon-size;
+    height: $icon-size;
+    flex-shrink: 0;
+  }
+
+  &Content {
+    flex-grow: 1;
+    width: calc(100% - #{spacing(2)} * 2 - #{spacing(1.5)} - #{$icon-size});
+    display: flex;
+    flex-direction: column;
+    gap: spacing(0.5);
+  }
+
+  &Name {
+    @include typography-subtle-medium;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    color: $neutral-600;
+  }
+
+  &TasksCount {
+    @include typography-subtle;
+    color: $neutral-400;
+  }
+
+  &:hover {
+    background-color: $neutral-200;
+    border-color: $neutral-400;
+  }
+}
