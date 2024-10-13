@@ -43,8 +43,8 @@ const TodoItem: FC<TodoItemProps> = ({ ...todo }) => {
               : "success"
           }
         >
-          {TaskStatus[todo.status][0].toUpperCase()}
-          {TaskStatus[todo.status].slice(1)}
+          {TaskStatus[todo.status][0].toUpperCase() +
+            TaskStatus[todo.status].slice(1)}
         </Tag>
         {!!user && (
           <Tag variant={userId === user.id ? "primary" : "default"}>
