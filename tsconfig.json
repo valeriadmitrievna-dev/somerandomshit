@@ -24,12 +24,9 @@
       "@shared/*": ["./src/shared/*"],
       "@widgets/*": ["./src/widgets/*"],
       "@services/*": ["./src/services/*"]
-    }
+    },
+    "types": ["vite-plugin-svgr/client"]
   },
-  "include": ["src"],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "include": ["src", "."],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
