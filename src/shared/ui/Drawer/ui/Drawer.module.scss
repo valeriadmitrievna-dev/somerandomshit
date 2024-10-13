@@ -1,0 +1,32 @@
+@use "@/shared/styles/common" as *;
+
+.drawer {
+  background-color: $neutral-0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include container(1, 2);
+  border-bottom: 1px solid $neutral-200;
+
+  .title {
+    @include typography-large;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.actions {
+  @include container();
+  border-top: 1px solid $neutral-200;
+}

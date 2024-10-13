@@ -3,8 +3,11 @@ import s from "./Todos.module.scss";
 import { PageTitle } from "@/entitites/PageTitle";
 import SortAZIcon from "@/shared/icons/sort-a-z.svg?react";
 import FiltersIcon from "@/shared/icons/filters.svg?react";
+import SaveIcon from "@/shared/icons/save.svg?react";
 import { IconButton } from "@/shared/ui/IconButton";
 import { Select } from "@/shared/ui/Select";
+import { Drawer } from "@/shared/ui/Drawer";
+import { Button } from "@/shared/ui/Button";
 
 const TodosPage: FC = () => {
   return (
@@ -26,7 +29,42 @@ const TodosPage: FC = () => {
               { value: "value3", label: "Priority" },
             ]}
           />
-          <IconButton icon={FiltersIcon} />
+          <Drawer
+            title='filters'
+            control={({ onOpen }) => (
+              <IconButton icon={FiltersIcon} onClick={onOpen} />
+            )}
+            actions={({ onClose }) => (
+              <div className={s.filtersActions}>
+                <Button
+                  className={s.filtersAction}
+                  variant='primary'
+                  onClick={onClose}
+                  centered
+                  size='large'
+                >
+                  Apply
+                </Button>
+                <IconButton
+                  className={s.filtersAction}
+                  variant='primary'
+                  icon={SaveIcon}
+                  onClick={onClose}
+                  size='large'
+                />
+                <Button
+                  className={s.filtersAction}
+                  onClick={onClose}
+                  centered
+                  size='large'
+                >
+                  Cancel
+                </Button>
+              </div>
+            )}
+          >
+            filters
+          </Drawer>
         </div>
       </header>
     </div>
