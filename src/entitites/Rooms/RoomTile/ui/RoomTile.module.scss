@@ -3,7 +3,7 @@
 .roomTile {
   border: 2px solid $neutral-300;
   background-color: $neutral-100;
-  border-radius: spacing();
+  border-radius: $border-radius-medium;
   @include container();
   display: flex;
   flex-direction: column;

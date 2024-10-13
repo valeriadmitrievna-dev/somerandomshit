@@ -28,7 +28,7 @@ const RoomsPage: FC = () => {
 
   return (
     <div className={s.page}>
-      <div className={s.header}>
+      <header className={s.header}>
         <PageTitle standalone>Rooms</PageTitle>
         <div className={s.modes}>
           <IconButton
@@ -42,7 +42,7 @@ const RoomsPage: FC = () => {
             icon={GridIcon}
           />
         </div>
-      </div>
+      </header>
       <div className={cn(s.rooms, s[mode])}>
         {rooms.map((room) => {
           if (mode === RoomsMode.Grid) {

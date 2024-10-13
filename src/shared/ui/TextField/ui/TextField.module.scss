@@ -36,7 +36,7 @@
     color: inherit;
     background-color: $neutral-0;
     border: 2px solid $neutral-300;
-    border-radius: spacing(0.5);
+    border-radius: $border-radius-small;
     transition: border-color 200ms, opacity 200ms;
 
     &:not(:focus):hover:not(:disabled):placeholder-shown {

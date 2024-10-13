@@ -1,0 +1,20 @@
+@use "@/shared/styles/common" as *;
+
+.page {
+  @include container(2);
+  padding-bottom: spacing(10);
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: spacing(3);
+  }
+
+  .tools {
+    display: flex;
+    align-items: center;
+    gap: spacing();
+    justify-content: flex-end;
+  }
+}

@@ -1,5 +1,9 @@
 $sizer: 8px;
 
+$border-radius-small: $sizer * 0.5;
+$border-radius-medium: $sizer;
+$border-radius-large: $sizer * 1.5;
+
 @function spacing($count: 1) {
   @return $count * $sizer;
 }
