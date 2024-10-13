@@ -12,8 +12,9 @@ const Drawer: FC<DrawerProps> = ({
   title,
   children,
   actions: Actions,
+  className,
 }) => {
-  const { isOpened, open, close } = useOpenControl(true);
+  const { isOpened, open, close } = useOpenControl();
 
   return (
     <>
@@ -24,7 +25,7 @@ const Drawer: FC<DrawerProps> = ({
             <p className={s.title}>{title}</p>
             <IconButton icon={CrossIcon} variant='ghost' onClick={close} />
           </div>
-          <ScrollArea>{children}</ScrollArea>
+          <ScrollArea className={className}>{children}</ScrollArea>
           {!!Actions && (
             <div className={s.actions}>
               <Actions onClose={close} />

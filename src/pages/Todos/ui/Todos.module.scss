@@ -17,18 +17,10 @@
     gap: spacing();
     justify-content: flex-end;
   }
-}
 
-.filtersActions {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: spacing();
-
-  .filtersAction {
-    width: 100%;
-
-    &:not(:nth-child(1)):not(:nth-child(2)) {
-      grid-column: span 2;
-    }
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1.5);
   }
 }

@@ -1,0 +1,32 @@
+@use "@/shared/styles/common" as *;
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: spacing();
+
+  &Button {
+    width: 100%;
+
+    &:not(:nth-child(1)):not(:nth-child(2)) {
+      grid-column: span 2;
+    }
+  }
+}
+
+.filters {
+  @include container(1, 2);
+  display: flex;
+  flex-direction: column;
+  gap: spacing(2);
+
+  &Title {
+    @include typography-p-ui-medium;
+  }
+
+  &Block {
+    display: flex;
+    flex-direction: column;
+    gap: spacing(1.5);
+  }
+}

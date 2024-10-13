@@ -10,7 +10,7 @@ const RoomItem: FC<RoomItemProps> = ({ ...room }) => {
       <GridIcon className={s.roomItemIcon} />
       <div className={s.roomItemContent}>
         <p className={s.roomItemName}>{room.name}</p>
-        <p className={s.roomItemTasksCount}>{room.tasksCount ?? 0} tasks</p>
+        <p className={s.roomItemTasksCount}>UNDEFINED tasks</p>
       </div>
     </NavLink>
   );

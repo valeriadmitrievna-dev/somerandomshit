@@ -1,0 +1,79 @@
+@use "@/shared/styles/common" as *;
+
+.todoItem {
+  $icon-size: 24px;
+  border: 2px solid $neutral-300;
+  background-color: $neutral-100;
+  border-radius: $border-radius-medium;
+  @include container(1);
+  display: flex;
+  flex-direction: column;
+  gap: spacing(0.5);
+  transition: background-color 200ms, border-color 200ms;
+
+  &Title {
+    @include typography-subtle-medium;
+    width: 100%;
+    color: $neutral-600;
+    align-items: center;
+    gap: spacing(0.5);
+
+    &Icon {
+      display: inline-block;
+      flex-shrink: 0;
+      height: 14px;
+      width: 14px;
+      vertical-align: middle;
+      margin-right: spacing(0.5);
+
+      &.low {
+        color: $success-600;
+      }
+
+      &.medium {
+        color: $warning-600;
+      }
+
+      &.high {
+        color: $error-600;
+      }
+    }
+
+    &Text {
+      vertical-align: middle;
+    }
+  }
+
+  &Tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: spacing(0.5);
+  }
+
+  &Deadline {
+    margin-top: spacing(0.5);
+    display: flex;
+    align-items: center;
+    gap: spacing(0.5);
+    color: $neutral-500;
+
+    &.expired {
+        color: $error-500;
+    }
+
+    &Icon {
+      width: 16px;
+      height: 16px;
+    }
+
+    &Text {
+      @include typography-subtle-medium;
+    }
+  }
+
+  &:hover {
+    background-color: $neutral-200;
+    border-color: $neutral-400;
+  }
+}

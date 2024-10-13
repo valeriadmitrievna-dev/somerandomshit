@@ -1,14 +1,15 @@
-import { Task, TaskType, User } from "@/shared/types";
+import { Task, TaskType } from "@/shared/types";
 import { faker } from "@faker-js/faker";
 import { homespaces } from "./_homespaces";
 import { random } from "lodash";
 import { addMonths, subMonths } from "date-fns";
+import { users } from './_users';
+import { rooms } from './_rooms';
 
 const createTask: () => Task = () => {
-  const homespaceId = random(0, 1)
+  const homespaceId = random()
     ? homespaces[0].id
     : homespaces[random(1, homespaces.length - 1)].id;
-  const users: User[] = [];
 
   return {
     id: faker.string.uuid(),
@@ -16,7 +17,10 @@ const createTask: () => Task = () => {
     type: TaskType.Default,
     done: !!random(),
     title: faker.lorem.sentence(),
-    ...(users.length ? { userId: users[random(0, users.length - 1)].id } : {}),
+    priority: random(0, 2) as Task['priority'],
+    status: random(0, 2) as Task['status'],
+    ...(random() ? users.length ? { userId: users[random(0, users.length - 1)].id } : {} : {}),
+    ...(random() ? rooms.length ? { roomId: rooms[random(0, rooms.length - 1)].id } : {} : {}),
     ...(random() ? { description: faker.lorem.sentences(random(1, 3)) } : {}),
     ...(random()
       ? {

@@ -5,5 +5,4 @@ export interface Room {
   name: string;
   image?: string;
   homespaceId: Homespace["id"];
-  tasksCount?: number;
 }

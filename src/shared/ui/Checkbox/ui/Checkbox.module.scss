@@ -1,0 +1,19 @@
+@use "@/shared/styles/common" as *;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: spacing();
+  width: fit-content;
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    color: $neutral-600;
+    cursor: pointer;
+  }
+
+  .label {
+    cursor: pointer;
+  }
+}

@@ -9,7 +9,7 @@ import { ScrollArea } from "../../ScrollArea";
 
 const Select: FC<SelectProps> = ({ control: CustomControl, options }) => {
   const ref = useRef<HTMLDivElement>(null);
-  const { isOpened, open, close } = useOpenControl(true);
+  const { isOpened, open, close } = useOpenControl();
 
   const [selectedOption, setSelectedOption] = useState<
     OptionWithIcon["value"] | null
