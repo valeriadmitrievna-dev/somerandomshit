@@ -12,8 +12,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "apple-touch-icon.png", "mask-icon.svg"],
       manifest: {
-        name: "Vite Dev",
-        short_name: "Vite Dev",
+        name: "somerandomshit",
+        short_name: "SRS",
         icons: [
           {
             src: "pwa-64x64.png",
@@ -39,9 +39,14 @@ export default defineConfig({
           },
         ],
         display: "standalone",
+        orientation: "portrait",
+        theme_color: "#6366f1",
+        background_color: "#ffffff",
         scope: "/",
         start_url: "/",
-        orientation: "portrait",
+      },
+      devOptions: {
+        enabled: true,
       },
     }),
   ],
