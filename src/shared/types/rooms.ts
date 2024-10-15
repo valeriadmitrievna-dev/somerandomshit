@@ -1,8 +1,9 @@
+import { roomIcons } from '../lib/constants';
 import { Homespace } from "./homespaces";
 
 export interface Room {
   id: string;
   name: string;
-  image?: string;
+  imageIcon: keyof typeof roomIcons;
   homespaceId: Homespace["id"];
 }

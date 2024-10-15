@@ -1,13 +1,15 @@
 import { FC } from "react";
 import s from "./RoomItem.module.scss";
 import { RoomItemProps } from "./types";
-import GridIcon from "@/shared/icons/grid.svg?react";
 import { NavLink } from "react-router-dom";
+import { roomIcons } from '@/shared/lib/constants';
 
 const RoomItem: FC<RoomItemProps> = ({ ...room }) => {
+  const Icon = roomIcons[room.imageIcon];
+
   return (
     <NavLink to={`/app/rooms/${room.id}`} className={s.roomItem}>
-      <GridIcon className={s.roomItemIcon} />
+      <Icon className={s.roomItemIcon} />
       <div className={s.roomItemContent}>
         <p className={s.roomItemName}>{room.name}</p>
         <p className={s.roomItemTasksCount}>UNDEFINED tasks</p>
